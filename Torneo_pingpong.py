@@ -65,9 +65,11 @@ def chooseWinners(players,tit=None):
         del WinnersList[:]
         for j in range(len(b)):
             b[j].configure(highlightbackground=default)
+	    b[j].configure(background=default)
     def btn(butidx):
         WinnersList.append(b[butidx].cget('text'))
         b[butidx].configure(highlightbackground='#00ff00')
+        b[butidx].configure(background='#00ff00')
 
     for i in range(Npartite):
         Label(cw,text='Vincitore partita: ').grid(row=i+1,column=0)
